@@ -3,445 +3,46 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nailva - Free Nail Salon CRM App</title>
-  <meta name="description" content="Free nail salon CRM app for nail technicians. Manage clients, bookings, and revenue. Works offline. 6 languages supported.">
-  <meta name="keywords" content="nail salon app, nail CRM, nail tech app, nail booking, nail client management, nail revenue tracker, free nail app, Nailva">
-  <meta property="og:title" content="Nailva - Free Nail Salon CRM App">
-  <meta property="og:description" content="Manage clients, bookings, and revenue. Works offline. 6 languages. Free for nail technicians.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://info-gate.github.io/">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@400,1&display=swap" rel="stylesheet">
+  <title>info-gate</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-
     body {
-      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-      color: #211a1c;
-      background: linear-gradient(180deg, #fff8f8 0%, #fff0f3 40%, #f0e6ff 100%);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #fafafa;
+      color: #333;
       min-height: 100vh;
-    }
-
-    .material-symbols-outlined {
-      font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-    }
-
-    /* Hero */
-    .hero {
-      text-align: center;
-      padding: 60px 20px 40px;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    .hero-icon {
-      width: 80px;
-      height: 80px;
-      border-radius: 20px;
-      background: linear-gradient(135deg, #FF6B81, #FF2D78);
       display: flex;
       align-items: center;
       justify-content: center;
-      margin: 0 auto 20px;
-      box-shadow: 0 8px 30px rgba(255, 45, 120, 0.3);
     }
-
-    .hero-icon .material-symbols-outlined {
-      font-size: 40px;
-      color: #fff;
+    .container {
+      text-align: center;
+      padding: 40px 20px;
     }
-
-    .hero h1 {
-      font-size: 42px;
-      font-weight: 800;
-      letter-spacing: -0.03em;
-      line-height: 1.1;
-      margin-bottom: 8px;
-      background: linear-gradient(135deg, #FF6B81, #b7004f);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .hero-tagline {
-      font-size: 20px;
-      font-weight: 600;
-      color: #5b3f44;
-      margin-bottom: 16px;
-    }
-
-    .hero-desc {
-      font-size: 16px;
-      color: #5b3f44;
-      line-height: 1.6;
-      max-width: 480px;
-      margin: 0 auto 30px;
-    }
-
-    /* Download Buttons */
-    .download-buttons {
-      display: flex;
-      gap: 12px;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-bottom: 16px;
-    }
-
-    .download-btn {
+    h1 { font-size: 28px; font-weight: 700; margin-bottom: 24px; }
+    .app-link {
       display: inline-flex;
       align-items: center;
-      gap: 10px;
-      padding: 14px 28px;
+      gap: 12px;
+      padding: 16px 32px;
       border-radius: 14px;
+      background: linear-gradient(135deg, #FF6B81, #FF2D78);
+      color: #fff;
       text-decoration: none;
       font-weight: 700;
-      font-size: 15px;
-      transition: transform 0.2s, box-shadow 0.2s;
+      font-size: 16px;
+      box-shadow: 0 6px 20px rgba(255, 45, 120, 0.3);
+      transition: transform 0.2s;
     }
-
-    .download-btn:active { transform: scale(0.97); }
-
-    .download-btn-play {
-      background: #111;
-      color: #fff;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-    }
-
-    .download-btn-apple {
-      background: #fff;
-      color: #111;
-      border: 2px solid #ddd;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-    }
-
-    .download-btn .material-symbols-outlined {
-      font-size: 24px;
-    }
-
-    .hero-free {
-      font-size: 14px;
-      color: #8f6f74;
-      margin-top: 8px;
-    }
-
-    /* Features */
-    .features {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 40px 20px;
-    }
-
-    .features h2 {
-      text-align: center;
-      font-size: 28px;
-      font-weight: 800;
-      margin-bottom: 32px;
-      color: #211a1c;
-    }
-
-    .feature-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 16px;
-    }
-
-    .feature-card {
-      background: rgba(255, 255, 255, 0.75);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border: 1px solid rgba(255, 255, 255, 0.5);
-      border-radius: 16px;
-      padding: 24px;
-      box-shadow: 0 4px 20px rgba(183, 0, 79, 0.06);
-    }
-
-    .feature-icon {
-      width: 44px;
-      height: 44px;
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 12px;
-    }
-
-    .feature-icon .material-symbols-outlined {
-      font-size: 22px;
-      color: #fff;
-    }
-
-    .fi-pink { background: linear-gradient(135deg, #FF6B81, #FF2D78); }
-    .fi-green { background: linear-gradient(135deg, #34d399, #059669); }
-    .fi-blue { background: linear-gradient(135deg, #60a5fa, #3b82f6); }
-    .fi-orange { background: linear-gradient(135deg, #fbbf24, #f59e0b); }
-    .fi-violet { background: linear-gradient(135deg, #a78bfa, #6b38d4); }
-    .fi-rose { background: linear-gradient(135deg, #f9a8d4, #f472b6); }
-
-    .feature-card h3 {
-      font-size: 17px;
-      font-weight: 700;
-      margin-bottom: 6px;
-    }
-
-    .feature-card p {
-      font-size: 14px;
-      color: #5b3f44;
-      line-height: 1.5;
-    }
-
-    /* Languages */
-    .languages {
-      text-align: center;
-      padding: 40px 20px;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    .languages h2 {
-      font-size: 24px;
-      font-weight: 800;
-      margin-bottom: 20px;
-    }
-
-    .lang-grid {
-      display: flex;
-      gap: 12px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    .lang-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 10px 18px;
-      background: rgba(255, 255, 255, 0.75);
-      border: 1px solid rgba(255, 255, 255, 0.5);
-      border-radius: 999px;
-      font-size: 14px;
-      font-weight: 600;
-      color: #211a1c;
-      box-shadow: 0 2px 10px rgba(183, 0, 79, 0.06);
-    }
-
-    .lang-flag { font-size: 20px; }
-
-    /* Privacy & CTA */
-    .bottom-section {
-      text-align: center;
-      padding: 40px 20px 60px;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    .privacy-card {
-      background: rgba(255, 255, 255, 0.75);
-      border-radius: 16px;
-      padding: 24px;
-      margin-bottom: 30px;
-      border: 1px solid rgba(255, 255, 255, 0.5);
-    }
-
-    .privacy-card h3 {
-      font-size: 18px;
-      margin-bottom: 10px;
-    }
-
-    .privacy-card p {
-      font-size: 14px;
-      color: #5b3f44;
-      line-height: 1.6;
-    }
-
-    .bottom-cta h2 {
-      font-size: 28px;
-      font-weight: 800;
-      margin-bottom: 20px;
-    }
-
-    /* Footer */
-    .footer {
-      text-align: center;
-      padding: 30px 20px;
-      font-size: 13px;
-      color: #8f6f74;
-    }
-
-    .footer a {
-      color: #b7004f;
-      text-decoration: none;
-    }
-
-    .footer-links {
-      display: flex;
-      gap: 20px;
-      justify-content: center;
-      margin-bottom: 10px;
-    }
-
-    /* Social */
-    .social-links {
-      display: flex;
-      gap: 16px;
-      justify-content: center;
-      margin-top: 20px;
-    }
-
-    .social-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 8px 16px;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.6);
-      border: 1px solid rgba(255, 255, 255, 0.5);
-      text-decoration: none;
-      font-size: 13px;
-      font-weight: 600;
-      color: #5b3f44;
-    }
-
-    @media (max-width: 480px) {
-      .hero h1 { font-size: 32px; }
-      .hero-tagline { font-size: 17px; }
-      .download-buttons { flex-direction: column; align-items: center; }
-      .download-btn { width: 100%; max-width: 280px; justify-content: center; }
-      .feature-grid { grid-template-columns: 1fr; }
-    }
+    .app-link:active { transform: scale(0.97); }
+    .footer { margin-top: 40px; font-size: 13px; color: #999; }
   </style>
 </head>
 <body>
-
-  <!-- Hero -->
-  <section class="hero">
-    <div class="hero-icon">
-      <span class="material-symbols-outlined">storefront</span>
-    </div>
-    <h1>Nailva</h1>
-    <p class="hero-tagline">Free Nail Salon CRM App</p>
-    <p class="hero-desc">
-      Manage your clients, bookings, and revenue in one app.
-      Built for solo nail technicians and small salon owners.
-      Works offline. No sign-up needed.
-    </p>
-    <div class="download-buttons">
-      <a href="https://play.google.com/store/apps/details?id=com.wowpia.nailshopmanager" class="download-btn download-btn-play" target="_blank" rel="noopener">
-        <span class="material-symbols-outlined">android</span>
-        Google Play
-      </a>
-      <a href="https://apps.apple.com/app/id6761184422" class="download-btn download-btn-apple" target="_blank" rel="noopener">
-        <span class="material-symbols-outlined">phone_iphone</span>
-        App Store
-      </a>
-    </div>
-    <p class="hero-free">100% Free &middot; No Account Required &middot; 6 Languages</p>
-  </section>
-
-  <!-- Features -->
-  <section class="features">
-    <h2>Everything You Need</h2>
-    <div class="feature-grid">
-      <div class="feature-card">
-        <div class="feature-icon fi-pink">
-          <span class="material-symbols-outlined">group</span>
-        </div>
-        <h3>Client Management</h3>
-        <p>Save client profiles with visit history, preferences, notes, and tags. Add profile photos. Track VIP and no-show customers.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon fi-blue">
-          <span class="material-symbols-outlined">event_note</span>
-        </div>
-        <h3>Smart Booking Calendar</h3>
-        <p>View daily appointments at a glance. Auto-detect available time slots. Quick booking with service presets.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon fi-green">
-          <span class="material-symbols-outlined">payments</span>
-        </div>
-        <h3>Revenue Tracking</h3>
-        <p>Daily, weekly, and monthly reports. Expense tracking. Service ranking by revenue. Export to CSV.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon fi-orange">
-          <span class="material-symbols-outlined">notifications_active</span>
-        </div>
-        <h3>Revisit Reminders</h3>
-        <p>Never lose a client. Auto-detect overdue customers. Daily notifications. Birthday reminders.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon fi-violet">
-          <span class="material-symbols-outlined">cloud_upload</span>
-        </div>
-        <h3>Cloud Backup</h3>
-        <p>Back up to Google Drive with one tap. Restore on any new device. Auto backup every 7 days.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon fi-rose">
-          <span class="material-symbols-outlined">photo_library</span>
-        </div>
-        <h3>Gallery & Portfolio</h3>
-        <p>Before and after service photos. Organize by client and date. Share to social media directly.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Languages -->
-  <section class="languages">
-    <h2>Built for Nail Techs Worldwide</h2>
-    <div class="lang-grid">
-      <span class="lang-pill"><span class="lang-flag">&#x1F1FA;&#x1F1F8;</span> English</span>
-      <span class="lang-pill"><span class="lang-flag">&#x1F1F0;&#x1F1F7;</span> &#xD55C;&#xAD6D;&#xC5B4;</span>
-      <span class="lang-pill"><span class="lang-flag">&#x1F1EF;&#x1F1F5;</span> &#x65E5;&#x672C;&#x8A9E;</span>
-      <span class="lang-pill"><span class="lang-flag">&#x1F1FB;&#x1F1F3;</span> Ti&#x1EBF;ng Vi&#x1EC7;t</span>
-      <span class="lang-pill"><span class="lang-flag">&#x1F1F9;&#x1F1ED;</span> &#xE20;&#xE32;&#xE29;&#xE32;&#xE44;&#xE17;&#xE22;</span>
-      <span class="lang-pill"><span class="lang-flag">&#x1F1E7;&#x1F1F7;</span> Portugu&#xEA;s</span>
-    </div>
-  </section>
-
-  <!-- Privacy & CTA -->
-  <section class="bottom-section">
-    <div class="privacy-card">
-      <h3>Your Data, Your Phone</h3>
-      <p>
-        All data is stored locally on your device. No cloud account required.
-        No internet needed for core features. Your client data is 100% private and secure.
-        We never collect or share your salon data.
-      </p>
-    </div>
-
-    <div class="bottom-cta">
-      <h2>Start Managing Your Salon Like a Pro</h2>
-      <div class="download-buttons">
-        <a href="https://play.google.com/store/apps/details?id=com.wowpia.nailshopmanager" class="download-btn download-btn-play" target="_blank" rel="noopener">
-          <span class="material-symbols-outlined">android</span>
-          Google Play
-        </a>
-        <a href="https://apps.apple.com/app/id6761184422" class="download-btn download-btn-apple" target="_blank" rel="noopener">
-          <span class="material-symbols-outlined">phone_iphone</span>
-          App Store
-        </a>
-      </div>
-    </div>
-
-    <div class="social-links">
-      <a href="https://www.instagram.com/nailva.app/" class="social-link" target="_blank" rel="noopener">
-        Instagram
-      </a>
-      <a href="https://www.tiktok.com/@nailva.app" class="social-link" target="_blank" rel="noopener">
-        TikTok
-      </a>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-links">
-      <a href="https://info-gate.github.io/nailshop-privacy/">Privacy Policy</a>
-      <a href="mailto:wowpiadev@gmail.com">Contact</a>
-    </div>
-    <p>&copy; 2026 Nailva. All rights reserved.</p>
-  </footer>
-
+  <div class="container">
+    <h1>info-gate</h1>
+    <a href="/nailshop/" class="app-link">Nailva — Nail Salon CRM</a>
+    <p class="footer">&copy; 2026 info-gate</p>
+  </div>
 </body>
 </html>
