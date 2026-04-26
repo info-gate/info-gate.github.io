@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OpenDocs 계정/데이터 삭제 안내</title>
+  <meta name="description" content="OpenDocs 앱은 계정 시스템이 없습니다. 모든 데이터는 기기 내 로컬 처리되며, 앱 삭제 시 함께 제거됩니다.">
+  <link rel="canonical" href="https://info-gate.github.io/opendocs/delete-account/">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans KR', sans-serif; color: #1f2937; background: #fafafa; line-height: 1.7; padding: 24px; }
+    .container { max-width: 760px; margin: 0 auto; background: #fff; padding: 40px 32px; border-radius: 16px; box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04); }
+    h1 { font-size: 24px; margin-bottom: 6px; color: #4F46E5; }
+    h2 { font-size: 18px; margin-top: 28px; margin-bottom: 10px; color: #1f2937; border-left: 3px solid #4F46E5; padding-left: 10px; }
+    p, li { font-size: 14px; color: #4B5563; margin-bottom: 6px; }
+    ul, ol { padding-left: 22px; margin-bottom: 8px; }
+    .badge { display: inline-block; background: #ECFDF5; color: #059669; padding: 6px 12px; border-radius: 6px; font-size: 13px; font-weight: 600; margin-bottom: 20px; }
+    .step { background: #F9FAFB; border-left: 4px solid #4F46E5; padding: 14px 18px; border-radius: 8px; margin: 12px 0; }
+    .step-num { font-weight: 800; color: #4F46E5; font-size: 13px; margin-bottom: 4px; }
+    .lang-divider { margin-top: 40px; padding-top: 30px; border-top: 2px dashed #E5E7EB; }
+    .footer { margin-top: 30px; padding-top: 18px; border-top: 1px solid #E5E7EB; font-size: 12px; color: #9CA3AF; text-align: center; }
+    .footer a { color: #4F46E5; margin: 0 8px; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>OpenDocs 계정/데이터 삭제 안내</h1>
+    <div class="badge">🔒 OpenDocs 는 계정 시스템이 없습니다 — 모든 데이터는 기기 내 로컬 저장</div>
+
+    <h2>핵심 안내</h2>
+    <p>OpenDocs 는 회원가입·로그인 기능이 없는 앱입니다. 회사의 외부 서버에 사용자 정보가 저장되지 않으며, 모든 데이터는 사용자 기기 내에서만 관리됩니다.</p>
+
+    <h2>로컬 데이터 삭제 방법</h2>
+    <p>다음 두 가지 방법으로 OpenDocs 가 기기에 저장한 모든 데이터를 즉시 삭제할 수 있습니다:</p>
+
+    <div class="step">
+      <div class="step-num">방법 1 — 앱 내 캐시 삭제 (부분 삭제)</div>
+      앱 실행 → ⚙ 설정 탭 → "📂 데이터 관리" → "캐시 삭제" → 확인<br>
+      <small>※ 임시 파일만 삭제됩니다. 최근 파일 목록·즐겨찾기는 유지.</small>
+    </div>
+
+    <div class="step">
+      <div class="step-num">방법 2 — 앱 삭제 (전체 데이터 제거)</div>
+      <strong>iOS</strong>: 홈 화면에서 OpenDocs 아이콘 길게 누름 → "App 제거" → "App 삭제"<br>
+      <strong>Android</strong>: 설정 → 앱 → OpenDocs → 제거<br>
+      <small>※ 앱 삭제 시 OpenDocs 가 저장한 모든 데이터(최근 파일 목록, 즐겨찾기, 캐시)가 즉시 영구 삭제됩니다.</small>
+    </div>
+
+    <h2>삭제되는 데이터 목록</h2>
+    <ul>
+      <li>최근 열어본 파일 목록 (파일명, 경로, 마지막 열람 시각, 크기)</li>
+      <li>즐겨찾기 표시 목록</li>
+      <li>앱 설정 (언어, 뷰어 옵션)</li>
+      <li>임시 캐시 파일</li>
+    </ul>
+
+    <h2>삭제되지 않는 것</h2>
+    <ul>
+      <li><strong>실제 문서 파일</strong>: 사용자가 다른 위치(파일 앱, 다운로드 폴더 등)에 저장한 원본 파일은 OpenDocs 와 무관하게 그대로 유지됩니다.</li>
+      <li><strong>광고 ID</strong>: 기기 시스템 ID 로 별도 관리됩니다. 재설정은 기기 설정 → 개인정보 → 광고 → "광고 ID 재설정" 에서 가능합니다.</li>
+    </ul>
+
+    <h2>외부 서비스 데이터 처리</h2>
+    <p>OpenDocs 가 사용하는 외부 서비스는 비식별 데이터를 자체 정책에 따라 처리합니다:</p>
+    <ul>
+      <li><strong>Google AdMob</strong>: <a href="https://policies.google.com/privacy">Google 개인정보처리방침</a> · 광고 ID 재설정 시 즉시 변경</li>
+      <li><strong>PostHog</strong> (분석): 90일 후 자동 파기 · 개인 식별 정보 미수집</li>
+      <li><strong>Sentry</strong> (오류 로그): 90일 후 자동 파기</li>
+    </ul>
+
+    <h2>문의</h2>
+    <p>데이터 삭제에 관한 추가 문의는 <a href="mailto:wowpia0127@gmail.com">wowpia0127@gmail.com</a> 으로 연락 바랍니다.</p>
+
+    <div class="lang-divider">
+      <h1>Account/Data Deletion (English Summary)</h1>
+      <p><strong>OpenDocs has no account system.</strong> All data is stored locally on your device. There is no server-side data to delete.</p>
+      <ul>
+        <li><strong>Method 1 — In-app clear</strong>: App → Settings tab → Data Management → Clear Cache</li>
+        <li><strong>Method 2 — Delete app</strong>: Removes all OpenDocs data (recent files, favorites, cache) instantly. Original document files in your file system are unaffected.</li>
+        <li><strong>External services</strong> (AdMob/PostHog/Sentry) handle non-identifying data per their own policies.</li>
+        <li><strong>Contact</strong>: <a href="mailto:wowpia0127@gmail.com">wowpia0127@gmail.com</a></li>
+      </ul>
+    </div>
+
+    <div class="footer">
+      © 2026 wowpia · Info-Gate Inc. ·
+      <a href="../">Home</a> ·
+      <a href="../privacy/">개인정보처리방침</a> ·
+      <a href="../terms/">이용약관</a>
+    </div>
+  </div>
+</body>
+</html>

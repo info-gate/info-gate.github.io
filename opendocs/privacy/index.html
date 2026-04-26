@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OpenDocs 개인정보처리방침 / Privacy Policy</title>
+  <meta name="description" content="OpenDocs 앱 개인정보처리방침. 수집 항목, 이용 목적, 보관 기간, 이용자 권리 안내. 100% 로컬 처리 — 서버 전송 없음.">
+  <link rel="canonical" href="https://info-gate.github.io/opendocs/privacy/">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans KR', sans-serif;
+      color: #1f2937; background: #fafafa; line-height: 1.7; padding: 24px;
+    }
+    .container {
+      max-width: 760px; margin: 0 auto;
+      background: #fff; padding: 40px 32px;
+      border-radius: 16px; box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+    }
+    h1 { font-size: 24px; margin-bottom: 6px; color: #4F46E5; }
+    h2 { font-size: 18px; margin-top: 28px; margin-bottom: 10px; color: #1f2937; border-left: 3px solid #4F46E5; padding-left: 10px; }
+    h3 { font-size: 15px; margin-top: 16px; margin-bottom: 6px; color: #374151; }
+    p, li { font-size: 14px; color: #4B5563; margin-bottom: 6px; }
+    ul, ol { padding-left: 22px; margin-bottom: 8px; }
+    .updated { font-size: 12px; color: #9CA3AF; margin-bottom: 24px; }
+    .badge { display: inline-block; background: #ECFDF5; color: #059669; padding: 4px 10px; border-radius: 6px; font-size: 12px; font-weight: 600; margin-bottom: 16px; }
+    .footer { margin-top: 30px; padding-top: 18px; border-top: 1px solid #E5E7EB; font-size: 12px; color: #9CA3AF; text-align: center; }
+    .footer a { color: #4F46E5; margin: 0 8px; text-decoration: none; }
+    .lang-divider { margin-top: 40px; padding-top: 30px; border-top: 2px dashed #E5E7EB; }
+    code { background: #F3F4F6; padding: 2px 6px; border-radius: 4px; font-family: 'JetBrains Mono', monospace; font-size: 13px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>OpenDocs 개인정보처리방침</h1>
+    <div class="badge">🔒 100% 로컬 처리 — 파일은 기기 밖으로 나가지 않습니다</div>
+    <div class="updated">시행일: 2026-04-26 · 최종 업데이트: 2026-04-26</div>
+
+    <p>주식회사 인포게이트(Info-Gate Inc., 이하 "회사")는 OpenDocs 앱(이하 "앱")의 개인정보 보호를 매우 중요하게 생각합니다. 본 방침은 앱이 어떤 정보를 어떻게 처리하는지 투명하게 안내합니다.</p>
+
+    <h2>1. 수집하는 개인정보 항목</h2>
+    <p>OpenDocs 는 사용자의 <strong>개인 식별 정보(이름, 이메일, 전화번호, 계정 등)를 일절 수집하지 않습니다</strong>. 회원가입·로그인 기능이 없습니다.</p>
+    <h3>로컬 처리 데이터 (기기에만 저장)</h3>
+    <ul>
+      <li>최근 열어본 파일 목록 (파일명, 경로, 마지막 열람 시각, 파일 크기)</li>
+      <li>즐겨찾기 표시한 파일 목록</li>
+      <li>앱 설정 (언어, 뷰어 옵션 등)</li>
+    </ul>
+    <p>위 데이터는 기기 내 SQLite DB(<code>opendocs.db</code>)에만 저장되며 외부로 전송되지 않습니다. 앱 삭제 시 함께 제거됩니다.</p>
+
+    <h3>광고 관련 (Google AdMob)</h3>
+    <ul>
+      <li>광고 ID (Android) / IDFA (iOS): Google 의 광고 게재용 비식별 식별자</li>
+      <li>기기 정보: 모델, OS 버전, 언어 (광고 타겟팅용 비식별)</li>
+      <li>광고 노출/클릭 통계: Google AdMob 이 자동 수집</li>
+    </ul>
+    <p>이 데이터의 처리·보관은 Google 의 <a href="https://policies.google.com/privacy">개인정보처리방침</a>에 따릅니다. 사용자는 기기 설정에서 광고 ID 재설정 또는 맞춤형 광고 거부 가능합니다.</p>
+
+    <h3>분석 (PostHog) · 에러 트래킹 (Sentry)</h3>
+    <ul>
+      <li>익명 사용 통계: 화면 방문, 기능 사용 빈도 (개인 식별 정보 미포함)</li>
+      <li>앱 오류 로그: 크래시 발생 시 stack trace, 기기 정보</li>
+    </ul>
+    <p>위 데이터는 앱 개선 목적으로만 사용되며, 개인을 식별할 수 없는 형태로 처리됩니다.</p>
+
+    <h2>2. 파일 처리 방침 — 핵심 약속</h2>
+    <p><strong>사용자가 OpenDocs 로 여는 모든 문서는 기기 내에서만 처리됩니다.</strong> 파일 내용은 어떤 외부 서버로도 전송되지 않습니다. 클라우드 동기화·백업 기능을 제공하지 않으며, 파일은 사용자 기기 외부에 저장되지 않습니다.</p>
+
+    <h2>3. 개인정보 보유 및 이용 기간</h2>
+    <ul>
+      <li><strong>로컬 처리 데이터</strong>: 사용자가 앱 내에서 삭제하거나 앱을 제거할 때까지</li>
+      <li><strong>광고 데이터 (Google AdMob)</strong>: Google 정책에 따름 (광고 ID 재설정 시 즉시 변경)</li>
+      <li><strong>분석/에러 로그 (PostHog/Sentry)</strong>: 90일 후 자동 파기</li>
+    </ul>
+
+    <h2>4. 개인정보 제3자 제공</h2>
+    <p>회사는 사용자의 개인정보를 외부에 제공하지 않습니다. 다음 외부 서비스가 비식별 데이터를 자체 처리합니다 (위탁 처리 위탁):</p>
+    <ul>
+      <li><strong>Google AdMob</strong> (Google LLC, USA): 광고 게재</li>
+      <li><strong>PostHog</strong> (PostHog Inc., USA): 익명 사용 통계</li>
+      <li><strong>Sentry</strong> (Functional Software Inc., USA): 앱 오류 모니터링</li>
+    </ul>
+
+    <h2>5. 사용자 권리</h2>
+    <ul>
+      <li><strong>열람·삭제</strong>: 앱 설정 → 데이터 관리 → 캐시 삭제 또는 앱 자체 삭제로 모든 로컬 데이터 즉시 제거</li>
+      <li><strong>광고 차단</strong>: 기기 설정 → 개인정보 → 광고 → 맞춤형 광고 사용 안 함</li>
+      <li><strong>분석 거부</strong>: 앱 설정 → (Phase 2 도입 예정) 분석 옵트아웃</li>
+      <li><strong>문의</strong>: <a href="mailto:wowpia0127@gmail.com">wowpia0127@gmail.com</a></li>
+    </ul>
+
+    <h2>6. 만 14세 미만 아동 정보</h2>
+    <p>본 앱은 모든 연령에 적합하나, 만 14세 미만 사용자의 경우 보호자 동의 하에 사용을 권장합니다. 회사는 만 14세 미만의 개인정보를 별도로 수집하지 않으며, 광고 또한 비개인화 광고만 표시됩니다.</p>
+
+    <h2>7. 방침 변경</h2>
+    <p>본 방침이 변경될 경우 앱 내 알림 또는 본 페이지(<code>info-gate.github.io/opendocs/privacy/</code>) 게시를 통해 사전 안내합니다.</p>
+
+    <h2>8. 개인정보 보호책임자</h2>
+    <ul>
+      <li>회사명: 주식회사 인포게이트 (Info-Gate Inc.)</li>
+      <li>책임자: wowpia 개발팀</li>
+      <li>연락처: <a href="mailto:wowpia0127@gmail.com">wowpia0127@gmail.com</a></li>
+    </ul>
+
+    <div class="lang-divider">
+      <h1>OpenDocs Privacy Policy (English Summary)</h1>
+      <p>OpenDocs is a free document viewer that prioritizes your privacy. Key points:</p>
+      <ul>
+        <li><strong>No personal data collected</strong>: No accounts, emails, or identifying information.</li>
+        <li><strong>Files stay on your device</strong>: All documents are processed locally. Nothing is uploaded to any server.</li>
+        <li><strong>Local data only</strong>: Recent file list and favorites are stored in your device's local database, removed when you delete the app.</li>
+        <li><strong>Advertising</strong>: Google AdMob serves ads using non-identifying device data (ad ID, OS version). Subject to <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>.</li>
+        <li><strong>Analytics</strong>: PostHog (anonymous usage stats) + Sentry (crash reports). No personally identifiable information.</li>
+        <li><strong>Your rights</strong>: Clear all local data via Settings → Data Management → Clear Cache, or simply delete the app.</li>
+        <li><strong>Contact</strong>: <a href="mailto:wowpia0127@gmail.com">wowpia0127@gmail.com</a></li>
+      </ul>
+    </div>
+
+    <div class="footer">
+      © 2026 wowpia · Info-Gate Inc. ·
+      <a href="../">Home</a> ·
+      <a href="../terms/">이용약관</a> ·
+      <a href="../delete-account/">계정/데이터 삭제</a>
+    </div>
+  </div>
+</body>
+</html>

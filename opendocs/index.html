@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OpenDocs — Forever Free Document Viewer</title>
+  <meta name="description" content="OpenDocs: 결제 팝업 없는 진짜 무료 문서뷰어. PDF · HWP · Word · Excel · EPUB · 이미지. 100% 로컬 처리, 서버 전송 없음.">
+  <link rel="canonical" href="https://info-gate.github.io/opendocs/">
+  <meta property="og:title" content="OpenDocs — Forever Free Document Viewer">
+  <meta property="og:description" content="결제 팝업 없는 진짜 무료. 100% 로컬 처리.">
+  <meta property="og:type" content="website">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans KR', sans-serif;
+      color: #1f2937;
+      background: linear-gradient(180deg, #EEF2FF 0%, #F9FAFB 50%);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+    .container { max-width: 760px; margin: 0 auto; padding: 60px 24px 80px; }
+    .hero { text-align: center; margin-bottom: 60px; }
+    .logo {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 80px; height: 80px; border-radius: 20px;
+      background: #4F46E5; color: #fff;
+      font-size: 40px; margin-bottom: 20px;
+      box-shadow: 0 8px 24px rgba(79, 70, 229, 0.3);
+    }
+    .wordmark { font-size: 38px; font-weight: 800; letter-spacing: -1px; margin-bottom: 8px; }
+    .wordmark span { color: #4F46E5; }
+    .tagline { font-size: 15px; color: #6B7280; margin-bottom: 28px; }
+    .badges { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-bottom: 12px; }
+    .badge {
+      display: inline-flex; align-items: center; gap: 4px;
+      padding: 6px 12px; border-radius: 99px; font-size: 12px; font-weight: 600;
+    }
+    .badge-green { background: #ECFDF5; color: #059669; }
+    .badge-indigo { background: #EEF2FF; color: #4F46E5; }
+    .badge-amber { background: #FEF3C7; color: #B45309; }
+    .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 50px; }
+    .feature {
+      background: #fff; padding: 24px 20px; border-radius: 14px;
+      border: 1px solid #E5E7EB; text-align: center;
+    }
+    .feature-icon { font-size: 32px; margin-bottom: 10px; }
+    .feature-title { font-size: 15px; font-weight: 700; margin-bottom: 6px; }
+    .feature-desc { font-size: 12px; color: #6B7280; line-height: 1.5; }
+    .formats {
+      background: #fff; padding: 24px; border-radius: 14px;
+      border: 1px solid #E5E7EB; margin-bottom: 30px;
+    }
+    .formats h2 { font-size: 16px; margin-bottom: 14px; color: #4F46E5; }
+    .format-list { display: flex; flex-wrap: wrap; gap: 6px; }
+    .format-pill { padding: 4px 10px; background: #F3F4F6; border-radius: 6px; font-size: 12px; color: #374151; font-family: 'JetBrains Mono', monospace; }
+    .links { text-align: center; margin-top: 40px; padding-top: 30px; border-top: 1px solid #E5E7EB; }
+    .links a { display: inline-block; margin: 0 12px; color: #4F46E5; font-size: 13px; text-decoration: none; font-weight: 500; }
+    .links a:hover { text-decoration: underline; }
+    footer { text-align: center; margin-top: 30px; font-size: 11px; color: #9CA3AF; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="hero">
+      <div class="logo">📑</div>
+      <div class="wordmark">Open<span>Docs</span></div>
+      <div class="tagline">결제 팝업 없는 진짜 무료 문서뷰어 · Forever Free Document Viewer</div>
+      <div class="badges">
+        <span class="badge badge-green">🔒 100% 로컬 처리</span>
+        <span class="badge badge-indigo">📑 모든 표준 포맷</span>
+        <span class="badge badge-amber">🆓 영원히 무료</span>
+      </div>
+    </div>
+
+    <div class="features">
+      <div class="feature">
+        <div class="feature-icon">🆓</div>
+        <div class="feature-title">진짜 무료</div>
+        <div class="feature-desc">결제 팝업 없음. 구독 없음. 광고로만 운영.</div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🔒</div>
+        <div class="feature-title">100% 로컬</div>
+        <div class="feature-desc">파일이 기기 밖으로 나가지 않음. 서버 전송 0.</div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">📚</div>
+        <div class="feature-title">표준 포맷 전부</div>
+        <div class="feature-desc">PDF · HWP · Word · Excel · EPUB · 이미지 등.</div>
+      </div>
+    </div>
+
+    <div class="formats">
+      <h2>📁 지원 파일 형식</h2>
+      <div class="format-list">
+        <span class="format-pill">PDF</span>
+        <span class="format-pill">HWP</span>
+        <span class="format-pill">HWPX</span>
+        <span class="format-pill">DOCX</span>
+        <span class="format-pill">DOC</span>
+        <span class="format-pill">XLSX</span>
+        <span class="format-pill">XLS</span>
+        <span class="format-pill">PPTX</span>
+        <span class="format-pill">PPT</span>
+        <span class="format-pill">EPUB</span>
+        <span class="format-pill">TXT</span>
+        <span class="format-pill">JPG</span>
+        <span class="format-pill">PNG</span>
+        <span class="format-pill">HEIC</span>
+        <span class="format-pill">WEBP</span>
+      </div>
+    </div>
+
+    <div class="links">
+      <a href="./privacy/">개인정보처리방침</a>
+      <a href="./terms/">이용약관</a>
+      <a href="./delete-account/">계정/데이터 삭제</a>
+      <a href="https://wowpia.kr">wowpia.kr →</a>
+    </div>
+
+    <footer>
+      © 2026 wowpia · Info-Gate Inc. · Forever Free
+    </footer>
+  </div>
+</body>
+</html>
