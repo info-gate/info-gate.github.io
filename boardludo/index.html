@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BoardLudo — Your rules. Your crew.</title>
+  <meta name="description" content="Global Ludo with house rules + 60s reconnect + free social. 9 languages. Real Ludo, real friends.">
+  <link rel="canonical" href="https://info-gate.github.io/boardludo/">
+  <meta property="og:title" content="BoardLudo — Your rules. Your crew.">
+  <meta property="og:description" content="House rules + 60s reconnect + free social. Real Ludo, real friends.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://info-gate.github.io/boardludo/">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', sans-serif;
+      color: #1A1206; line-height: 1.5;
+    }
+    body { background: #FFF6E5; }
+    .hero {
+      background: linear-gradient(135deg, #C94200 0%, #FF7B25 100%);
+      color: #fff; padding: 80px 24px 100px; text-align: center;
+    }
+    .brand {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: rgba(255,255,255,0.18); padding: 8px 18px; border-radius: 999px;
+      font-weight: 700; font-size: 14px; margin-bottom: 24px;
+    }
+    h1 {
+      font-size: clamp(38px, 6vw, 64px); font-weight: 800;
+      line-height: 1.1; letter-spacing: -1.5px; margin-bottom: 18px;
+    }
+    h1 .accent { color: #FFE082; }
+    .sub { font-size: clamp(16px, 2.5vw, 22px); opacity: 0.92; max-width: 600px; margin: 0 auto; }
+    .badges { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-top: 32px; }
+    .badge {
+      background: rgba(255,255,255,0.22); padding: 10px 20px; border-radius: 999px;
+      font-weight: 600; font-size: 14px;
+    }
+    .stores { margin-top: 36px; display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .store-btn {
+      background: #fff; color: #C94200; padding: 14px 28px; border-radius: 12px;
+      font-weight: 800; font-size: 16px; text-decoration: none; display: inline-flex; align-items: center; gap: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+    }
+    .store-btn.coming { opacity: 0.6; cursor: not-allowed; }
+    .features {
+      max-width: 980px; margin: -60px auto 0; padding: 24px;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px;
+    }
+    .card {
+      background: #fff; border-radius: 24px; padding: 28px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+    }
+    .icon-circle {
+      width: 56px; height: 56px; border-radius: 28px; background: #FFF0E6;
+      display: flex; align-items: center; justify-content: center; font-size: 28px;
+      margin-bottom: 16px;
+    }
+    .card h3 { font-size: 20px; font-weight: 800; margin-bottom: 8px; }
+    .card p { font-size: 15px; color: #6E5F50; }
+    .footer {
+      max-width: 980px; margin: 60px auto 0; padding: 24px;
+      text-align: center; color: #6E5F50; font-size: 14px;
+    }
+    .footer a { color: #C94200; text-decoration: none; margin: 0 12px; font-weight: 600; }
+    .footer a:hover { text-decoration: underline; }
+    .copyright { margin-top: 16px; font-size: 12px; opacity: 0.7; }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="brand">🎲 BoardLudo</div>
+    <h1>Your rules.<br><span class="accent">Your crew.</span></h1>
+    <p class="sub">Global Ludo with house rules, 60-second reconnect, and free social.<br>Real Ludo. Real friends. 9 languages.</p>
+    <div class="badges">
+      <span class="badge">🏠 House Rules</span>
+      <span class="badge">⏱ 60s Reconnect</span>
+      <span class="badge">👥 Free Social</span>
+      <span class="badge">🎯 ELO Matching</span>
+    </div>
+    <div class="stores">
+      <a class="store-btn coming" href="#">📱 App Store · Coming Soon</a>
+      <a class="store-btn coming" href="#">🤖 Google Play · Coming Soon</a>
+    </div>
+  </header>
+
+  <section class="features">
+    <div class="card">
+      <div class="icon-circle">🏠</div>
+      <h3>House Rules</h3>
+      <p>Standard / Fast / Team 2v2 presets — plus custom rule builder coming soon. Play your home rules digitally.</p>
+    </div>
+    <div class="card">
+      <div class="icon-circle">⏱</div>
+      <h3>60s Reconnect</h3>
+      <p>Lost connection? Game waits up to 60 seconds. Then a smart AI takes over so the others keep playing.</p>
+    </div>
+    <div class="card">
+      <div class="icon-circle">👏</div>
+      <h3>Free Social</h3>
+      <p>Follow opponents from games you played. Cheer them when they're playing. Invite friends with a code — both get +200 XP.</p>
+    </div>
+    <div class="card">
+      <div class="icon-circle">🎯</div>
+      <h3>Fair Matching</h3>
+      <p>ELO-based matchmaking finds you opponents at your skill level. Anti-cheat detection keeps the leaderboard real.</p>
+    </div>
+    <div class="card">
+      <div class="icon-circle">🌍</div>
+      <h3>9 Languages</h3>
+      <p>English, Hindi, Spanish, Arabic, Indonesian, Urdu, Portuguese, Korean, Japanese. RTL ready.</p>
+    </div>
+    <div class="card">
+      <div class="icon-circle">🎲</div>
+      <h3>Real-time Fun</h3>
+      <p>Smooth dice animation, pawn hop, capture shake. In-game emoji reactions. The feel of the home table — on your phone.</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div>
+      <a href="privacy/">Privacy Policy</a>
+      <a href="terms/">Terms of Service</a>
+      <a href="delete-account/">Delete Account</a>
+    </div>
+    <div class="copyright">© 2026 wowpia app studio. All rights reserved.</div>
+  </footer>
+</body>
+</html>
