@@ -1,20 +1,23 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Barolingo Korean — 들리는 순서대로 영어를</title>
-  <meta name="description" content="청크 단위로 영어를 들리는 순서대로 이해하는 훈련. 하루 3분, 반응속도로 실력 측정.">
+  <title>Barolingo Korean — Learn Korean with chunks (한국어 배우기)</title>
+  <meta name="description" content="Learn real Korean phrases native speakers actually use — chunks, not random words. From K-drama, K-pop, daily life. AI explanations in 17 languages. Daily challenges, word puzzles, global leaderboard.">
   <link rel="canonical" href="https://info-gate.github.io/barolingo-korean/">
-  <meta property="og:title" content="Barolingo — 영어를 들리는 순서대로">
-  <meta property="og:description" content="하루 3분 청크 훈련으로 영어 듣기 감각이 빨라져요.">
+  <meta property="og:title" content="Barolingo Korean — Learn Korean with chunks">
+  <meta property="og:description" content="Real Korean from K-drama, K-pop, and daily life. Chunks, not random words.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://info-gate.github.io/barolingo-korean/">
-  <meta name="theme-color" content="#1D9E75">
+  <meta name="theme-color" content="#E66B6B">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="ko_KR">
+  <meta property="og:locale:alternate" content="ja_JP">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html, body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans KR', sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif;
       color: #1A1D22;
       background: #fafafa;
       line-height: 1.6;
@@ -24,7 +27,7 @@
 
     /* Hero */
     .hero {
-      background: linear-gradient(135deg, #1D9E75 0%, #157A5A 100%);
+      background: linear-gradient(135deg, #E66B6B 0%, #C93030 100%);
       color: #fff;
       padding: 56px 24px 80px;
       position: relative;
@@ -48,33 +51,32 @@
       width: 180px;
       height: 180px;
       border-radius: 50%;
-      background: rgba(239,159,39,0.2);
+      background: rgba(255,255,255,0.18);
     }
-    .hero-inner {
-      max-width: 720px;
-      margin: 0 auto;
-      position: relative;
-      z-index: 1;
-    }
-    .brand {
-      font-size: 14px;
-      letter-spacing: 1px;
-      opacity: 0.9;
-      margin-bottom: 10px;
-      font-weight: 700;
-    }
+    .hero-inner { max-width: 720px; margin: 0 auto; position: relative; z-index: 1; }
+    .brand { font-size: 14px; letter-spacing: 1px; opacity: 0.9; margin-bottom: 10px; font-weight: 700; }
     h1 {
       font-size: 38px;
       font-weight: 800;
       line-height: 1.15;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
       letter-spacing: -0.5px;
     }
-    h1 span { color: #FBD78D; }
+    h1 span { color: #FFE9E9; }
+    .hangul-tag {
+      display: inline-block;
+      font-family: 'Noto Sans KR', sans-serif;
+      font-weight: 800;
+      font-size: 22px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.18);
+      margin-bottom: 18px;
+    }
     .hero p {
       font-size: 17px;
       line-height: 1.55;
-      opacity: 0.93;
+      opacity: 0.95;
       margin-bottom: 32px;
     }
 
@@ -93,14 +95,14 @@
       transition: transform 0.1s ease;
     }
     .btn:active { transform: scale(0.97); }
-    .btn-primary { background: #fff; color: #1D9E75; }
+    .btn-primary { background: #fff; color: #C93030; }
     .btn-secondary {
       background: rgba(255,255,255,0.15);
       color: #fff;
-      border: 1px solid rgba(255,255,255,0.25);
+      border: 1px solid rgba(255,255,255,0.28);
     }
 
-    /* Features */
+    /* Sections */
     .section { padding: 56px 24px; }
     .section-inner { max-width: 720px; margin: 0 auto; }
     .section h2 {
@@ -109,6 +111,9 @@
       margin-bottom: 28px;
       color: #1A1D22;
     }
+    .section h2 .accent { color: #E66B6B; }
+
+    /* Features */
     .feature {
       display: flex;
       gap: 14px;
@@ -122,8 +127,8 @@
       width: 44px;
       height: 44px;
       border-radius: 10px;
-      background: #E6F5EE;
-      color: #1D9E75;
+      background: #FFE9E9;
+      color: #C93030;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -132,6 +137,20 @@
     }
     .feature h3 { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
     .feature p { font-size: 13px; color: #4B5159; }
+
+    /* Audience */
+    .audience-grid { display: grid; gap: 10px; grid-template-columns: 1fr 1fr; }
+    @media (min-width: 640px) { .audience-grid { grid-template-columns: repeat(4, 1fr); } }
+    .audience-card {
+      background: #fff;
+      padding: 16px 12px;
+      border-radius: 12px;
+      border: 1px solid #F1F3F6;
+      text-align: center;
+    }
+    .audience-emoji { font-size: 28px; margin-bottom: 6px; }
+    .audience-card h4 { font-size: 13px; font-weight: 700; color: #1A1D22; }
+    .audience-card p { font-size: 11px; color: #7A828C; margin-top: 2px; }
 
     /* How */
     .how-grid { display: grid; gap: 12px; grid-template-columns: 1fr; }
@@ -149,7 +168,7 @@
       height: 32px;
       line-height: 32px;
       border-radius: 50%;
-      background: #1D9E75;
+      background: #E66B6B;
       color: #fff;
       font-weight: 800;
       font-size: 14px;
@@ -157,6 +176,31 @@
     }
     .how-card h3 { font-size: 14px; font-weight: 700; margin-bottom: 4px; }
     .how-card p { font-size: 12px; color: #4B5159; }
+
+    /* Languages strip */
+    .lang-strip {
+      background: #FFF6F6;
+      padding: 32px 24px;
+      text-align: center;
+    }
+    .lang-strip h3 {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.6px;
+      color: #C93030;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .lang-list { font-size: 14px; color: #4B5159; line-height: 2; max-width: 600px; margin: 0 auto; }
+    .lang-list span {
+      display: inline-block;
+      padding: 4px 10px;
+      margin: 3px;
+      background: #fff;
+      border-radius: 999px;
+      border: 1px solid #FFE0E0;
+      font-weight: 600;
+    }
 
     /* CTA bottom */
     .cta-bottom {
@@ -167,9 +211,30 @@
     }
     .cta-bottom h2 { font-size: 22px; font-weight: 800; margin-bottom: 10px; color: #fff; }
     .cta-bottom p { font-size: 14px; opacity: 0.75; margin-bottom: 24px; }
+    .store-row {
+      display: flex; flex-direction: column; gap: 10px;
+      align-items: center; justify-content: center;
+    }
+    @media (min-width: 520px) { .store-row { flex-direction: row; } }
+    .store-btn {
+      display: inline-flex;
+      align-items: center; justify-content: center;
+      gap: 10px;
+      padding: 14px 24px;
+      border-radius: 12px;
+      font-size: 15px;
+      font-weight: 700;
+      text-decoration: none;
+      min-width: 220px;
+      background: #fff;
+      color: #1A1D22;
+      transition: transform 0.1s ease, opacity 0.1s ease;
+    }
+    .store-btn:active { transform: scale(0.97); }
+    .store-btn .store-emoji { font-size: 22px; }
 
     footer {
-      padding: 24px;
+      padding: 28px 24px;
       text-align: center;
       font-size: 12px;
       color: #7A828C;
@@ -182,12 +247,16 @@
   <!-- Hero -->
   <section class="hero">
     <div class="hero-inner">
-      <div class="brand">baro.lingo</div>
-      <h1>영어를 <span>들리는 순서</span>대로 이해하세요</h1>
-      <p>청크 단위 훈련으로 하루 3분이면 충분해요.<br>반응속도가 곧 실력입니다.</p>
+      <div class="brand">BAROLINGO KOREAN</div>
+      <span class="hangul-tag">한국어 배우기</span>
+      <h1>Speak Korean like <span>K-drama natives</span> — chunks, not words</h1>
+      <p>
+        Stop memorizing vocabulary lists. Learn 3-8 word phrases real Koreans actually use,
+        with AI explanations in <strong>17 languages</strong>. From K-pop, K-drama, and daily life.
+      </p>
       <div class="cta-row">
-        <a href="#download" id="cta-android" class="btn btn-primary">📱 Android에서 시작</a>
-        <a href="#how" class="btn btn-secondary">사용법 보기</a>
+        <a href="#download" id="cta-android" class="btn btn-primary">📱 Get the app</a>
+        <a href="#how" class="btn btn-secondary">How it works</a>
       </div>
     </div>
   </section>
@@ -195,114 +264,169 @@
   <!-- Features -->
   <section class="section">
     <div class="section-inner">
-      <h2>왜 Barolingo인가요?</h2>
+      <h2>Why <span class="accent">Barolingo Korean</span>?</h2>
+
       <div class="feature">
-        <div class="feature-icon">⚡</div>
+        <div class="feature-icon">🎬</div>
         <div>
-          <h3>청크 단위 순차 학습</h3>
-          <p>영어 문장을 의미 단위로 쪼개 들리는 순서대로 이해하는 뇌 훈련.</p>
+          <h3>K-drama / K-pop chunks</h3>
+          <p>The exact phrases your favorite idols and actors say — not textbook sentences nobody actually uses.</p>
         </div>
       </div>
+
       <div class="feature">
-        <div class="feature-icon">📊</div>
+        <div class="feature-icon">🧠</div>
         <div>
-          <h3>반응속도 실력 측정</h3>
-          <p>이해까지 걸린 ms 단위 측정. 매일 빨라지는 나를 숫자로 확인.</p>
+          <h3>AI 4-layer explanations</h3>
+          <p>Word breakdown, grammar, cultural context, and pronunciation — instantly, in your native language.</p>
         </div>
       </div>
+
       <div class="feature">
         <div class="feature-icon">🌏</div>
         <div>
-          <h3>10개 언어 힌트</h3>
-          <p>한국어·일본어·영어 등 모국어로 힌트 제공. 전 세계 학습자 환영.</p>
+          <h3>17 languages supported</h3>
+          <p>Korean, English, Japanese, Spanish, Arabic, Indonesian, Turkish, Mongolian, Bengali, Nepali, Burmese, Kazakh, Uzbek, Chinese, Hindi, Russian, Portuguese.</p>
         </div>
       </div>
+
       <div class="feature">
-        <div class="feature-icon">🎯</div>
+        <div class="feature-icon">🧩</div>
         <div>
-          <h3>일상·비즈니스·뉴스·영화</h3>
-          <p>7개 카테고리 × 4레벨 실전 콘텐츠 1,000+개.</p>
+          <h3>Daily Word Puzzles</h3>
+          <p>New Korean Wordle every day, practice modes by TOPIK level, share results with friends.</p>
+        </div>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon">🏆</div>
+        <div>
+          <h3>Global leaderboard + cheers</h3>
+          <p>Compete with learners worldwide weekly, cheer each other on, see who's grinding hardest.</p>
+        </div>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon">🎙️</div>
+        <div>
+          <h3>Native pronunciation (Neural TTS)</h3>
+          <p>Google Cloud Korean Neural voice — natural intonation, not robotic.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Audience -->
+  <section class="section" style="background: #fff;">
+    <div class="section-inner">
+      <h2>Made for <span class="accent">global Korean learners</span></h2>
+      <div class="audience-grid">
+        <div class="audience-card">
+          <div class="audience-emoji">💜</div>
+          <h4>K-pop fans</h4>
+          <p>Sing & understand</p>
+        </div>
+        <div class="audience-card">
+          <div class="audience-emoji">🍿</div>
+          <h4>K-drama viewers</h4>
+          <p>No more subtitles</p>
+        </div>
+        <div class="audience-card">
+          <div class="audience-emoji">🇰🇷</div>
+          <h4>Workers in Korea</h4>
+          <p>EPS / daily life</p>
+        </div>
+        <div class="audience-card">
+          <div class="audience-emoji">📚</div>
+          <h4>TOPIK students</h4>
+          <p>Level 1 → 6 path</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- How it works -->
-  <section class="section" id="how" style="background: #fff;">
+  <section class="section" id="how" style="background: #FFF6F6;">
     <div class="section-inner">
-      <h2>이렇게 훈련해요</h2>
+      <h2>How you'll learn</h2>
       <div class="how-grid">
         <div class="how-card">
           <span class="how-num">1</span>
-          <h3>청크가 나타남</h3>
-          <p>2~5단어 짧은 구가 순서대로 등장</p>
+          <h3>A chunk appears</h3>
+          <p>3-8 word natural Korean phrase</p>
         </div>
         <div class="how-card">
           <span class="how-num">2</span>
-          <h3>이해했으면 탭</h3>
-          <p>반응속도 ms 자동 측정</p>
+          <h3>Tap when you get it</h3>
+          <p>AI explains in your language</p>
         </div>
         <div class="how-card">
           <span class="how-num">3</span>
-          <h3>다음 청크</h3>
-          <p>느린 청크는 복습으로 자동 편성</p>
+          <h3>Daily challenge</h3>
+          <p>Word puzzles + leaderboard ranking</p>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Languages -->
+  <section class="lang-strip">
+    <h3>AI explanations in your language</h3>
+    <div class="lang-list">
+      <span>한국어</span>
+      <span>English</span>
+      <span>日本語</span>
+      <span>Español</span>
+      <span>العربية</span>
+      <span>Bahasa Indonesia</span>
+      <span>Türkçe</span>
+      <span>Монгол</span>
+      <span>বাংলা</span>
+      <span>नेपाली</span>
+      <span>မြန်မာ</span>
+      <span>Қазақ</span>
+      <span>O'zbek</span>
+      <span>中文</span>
+      <span>हिन्दी</span>
+      <span>Русский</span>
+      <span>Português</span>
+    </div>
+  </section>
+
   <!-- CTA bottom -->
   <section class="cta-bottom" id="download">
-    <h2>지금 바로 시작하세요</h2>
-    <p id="cta-desc">무료로 이용 가능 · 광고 없이 학습 가능한 Pro 플랜도 곧 출시</p>
-    <a href="#" id="cta-download-btn" class="btn btn-primary">
-      📱 Google Play에서 다운로드
-    </a>
+    <h2>Start learning today</h2>
+    <p>Free to use · Available on iOS and Android</p>
+    <div class="store-row">
+      <a href="https://play.google.com/store/apps/details?id=com.barolingo.korean"
+         class="store-btn" id="store-android">
+        <span class="store-emoji">🤖</span>
+        <span>Get on Google Play</span>
+      </a>
+      <a href="https://apps.apple.com/app/id6765983772"
+         class="store-btn" id="store-ios">
+        <span class="store-emoji">🍎</span>
+        <span>Get on App Store</span>
+      </a>
+    </div>
   </section>
 
   <footer>
-    © 2026 wowpia · Barolingo
+    © 2026 Wowpia · Barolingo Korean
     <br>
-    <a href="/barolingo/privacy/">개인정보처리방침</a> ·
-    <a href="/barolingo/terms/">이용약관</a> ·
-    <a href="mailto:parkbongjun23@gmail.com">문의</a>
+    <a href="/barolingo-korean/privacy/">Privacy Policy</a> ·
+    <a href="/barolingo-korean/terms/">Terms of Service</a> ·
+    <a href="/barolingo-korean/delete-account/">Delete account</a> ·
+    <a href="mailto:wowpia0127@gmail.com">Contact</a>
   </footer>
 
   <script>
-    // Play Store URL (출시 후 교체). 출시 전에는 호출 시 가이드만 안내.
-    var PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=com.barolingo.korean';
-
-    // ref 파라미터 추적 (나중에 Firebase Analytics 연동 시 사용)
+    // ref param tracking (referral 친구 초대 경유)
     var params = new URLSearchParams(window.location.search);
     var ref = params.get('ref');
     if (ref) {
-      // 친구 초대 경유 방문 — 로컬 스토리지에 저장 후 앱 설치 시 이벤트 트래킹 가능
-      try { localStorage.setItem('barolingo_ref', ref); } catch {}
+      try { localStorage.setItem('barolingo_korean_ref', ref); } catch (e) {}
     }
-
-    // CTA 버튼 모두 Play Store로 연결 (출시 후 실제 URL 동작)
-    document.addEventListener('DOMContentLoaded', function () {
-      var btns = document.querySelectorAll('#cta-android, #cta-download-btn');
-      btns.forEach(function (b) {
-        b.addEventListener('click', function (e) {
-          // Play Store 등록 전까진 임시 메시지
-          // 등록 후엔 그냥 href가 Play Store URL이면 됨
-          var href = b.getAttribute('href');
-          if (!href || href === '#' || href === '#download') {
-            e.preventDefault();
-            // 출시 전: alert 대신 자연스러운 스크롤
-            var target = document.getElementById('download');
-            if (target) target.scrollIntoView({ behavior: 'smooth' });
-          } else if (href === PLAY_STORE_URL) {
-            // OK — 이동
-          }
-        });
-      });
-
-      // 출시 확정되면 아래 한 줄만 주석 해제하면 됨
-      // document.getElementById('cta-download-btn').setAttribute('href', PLAY_STORE_URL);
-      // document.getElementById('cta-android').setAttribute('href', PLAY_STORE_URL);
-    });
   </script>
 </body>
 </html>
