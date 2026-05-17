@@ -58,7 +58,7 @@
     <!-- ========== 한국어 ========== -->
     <section id="ko" class="section-ko">
       <h1>Barolingo Korean 개인정보처리방침</h1>
-      <p class="meta">최종 개정일: 2026년 5월 12일 · 시행일: 2026년 5월 12일</p>
+      <p class="meta">최종 개정일: 2026년 5월 17일 · 시행일: 2026년 5월 17일</p>
 
       <p>wowpia(이하 "회사")는 Barolingo 애플리케이션(이하 "서비스") 이용자의 개인정보를 소중히 여기며, <strong>「개인정보 보호법」</strong>을 비롯한 관련 법령을 준수합니다. 본 방침은 이용자가 어떤 정보를 제공하고 어떻게 보호되는지 안내합니다.</p>
 
@@ -84,6 +84,15 @@
 
       <h3>1-3. AI 자동 생성 콘텐츠 안내</h3>
       <p>본 서비스의 "오늘의 K-챌린지" 단어 일부는 <strong>Google Gemini 인공지능</strong>이 매일 자동 생성합니다. 이 과정에서 사용자 개인정보는 외부 AI 모델로 전송되지 않으며, 단어 생성 prompt 만 사용됩니다. AI 생성 콘텐츠는 회사가 사전 검토 후 게시하며, 부적절한 콘텐츠 발견 시 즉시 제거합니다.</p>
+
+      <h3>1-4. 친구 시스템 (Friends)</h3>
+      <ul>
+        <li>친구 관계: 본인이 보낸/받은 친구 요청, 친구 ID 목록, 요청 상태(pending/accepted/rejected)</li>
+        <li>친구 검색 입력: 검색 시 입력한 닉네임/이메일 (검색 결과 표시 후 저장하지 않음)</li>
+        <li><strong>응원 메시지 (User-Generated Content)</strong>: 친구에게 보낸 응원 이모지 (👏🎉💪🔥⭐) + 짧은 텍스트 메시지</li>
+        <li>친구 활동 알림: 친구 요청/수락/응원 수신 시 푸시 알림 발송 (위 1-2 의 푸시 토큰 사용)</li>
+      </ul>
+      <p>응원 메시지는 발신자·수신자 본인만 볼 수 있으며 공개 게시판에 노출되지 않습니다. 부적절한 콘텐츠 신고 시 회사는 즉시 검토하여 삭제할 수 있습니다. 사용자가 친구 관계를 해제하거나 회원 탈퇴 시 관련 데이터는 즉시 파기됩니다.</p>
 
       <h2>2. 수집 및 이용 목적</h2>
       <ul>
@@ -146,13 +155,15 @@
       <h2>8. 개정 이력</h2>
       <ul>
         <li>2026-04-19: 최초 제정</li>
+        <li>2026-05-12: 푸시 알림 토큰 + AI 자동 생성 콘텐츠 (Google Gemini) 항목 추가</li>
+        <li>2026-05-17: 친구 시스템 (UGC 응원 메시지, 친구 활동 알림) 항목 추가</li>
       </ul>
     </section>
 
     <!-- ========== English ========== -->
     <section id="en" class="section-en">
       <h1>Barolingo Privacy Policy</h1>
-      <p class="meta">Last updated: May 12, 2026 · Effective: May 12, 2026</p>
+      <p class="meta">Last updated: May 17, 2026 · Effective: May 17, 2026</p>
 
       <p>wowpia ("we", "us", "our") values the privacy of Barolingo users. This policy explains what information we collect and how we protect it, in compliance with applicable data protection laws.</p>
 
@@ -179,6 +190,15 @@
       <h3>1-3. AI-Generated Content Notice</h3>
       <p>Some "Daily K-Challenge" words are <strong>auto-generated daily by Google Gemini AI</strong>. No user personal information is sent to the AI model — only generation prompts. AI-generated content is reviewed before publication, and inappropriate content is removed immediately upon discovery.</p>
 
+      <h3>1-4. Friends System</h3>
+      <ul>
+        <li>Friend relationships: friend requests sent/received, friend ID list, request status (pending/accepted/rejected)</li>
+        <li>Search input: nickname/email entered when searching for friends (used for query only, not stored)</li>
+        <li><strong>Cheer messages (User-Generated Content)</strong>: emoji cheers (👏🎉💪🔥⭐) and short text sent to friends</li>
+        <li>Friend activity notifications: push notifications sent on friend request/accept/cheer receipt (uses the push token from section 1-2)</li>
+      </ul>
+      <p>Cheer messages are visible only to the sender and recipient — never posted publicly. Reported inappropriate content is reviewed and removed promptly. When a user unfriends or deletes their account, related data is immediately purged.</p>
+
       <h2>2. Purposes of Collection and Use</h2>
       <ul>
         <li>Member identification and session persistence</li>
@@ -199,7 +219,8 @@
           <tr><td>Google AdMob</td><td>Ad ID, IP, device info</td><td>Ad serving</td></tr>
           <tr><td>Sentry</td><td>Stack traces, app version</td><td>Crash diagnostics</td></tr>
           <tr><td>PostHog</td><td>Event logs, anonymous ID</td><td>Product analytics</td></tr>
-          <tr><td>Anthropic</td><td>(Reserved for AI features)</td><td>AI feedback — not active</td></tr>
+          <tr><td>Anthropic / Google Gemini</td><td>Word generation prompts (no user data)</td><td>Daily K-content word generation</td></tr>
+          <tr><td>Expo (Expo Push API)</td><td>Push token, message content</td><td>Daily K-word + friend activity notifications</td></tr>
         </tbody>
       </table>
 
