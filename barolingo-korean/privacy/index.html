@@ -58,7 +58,7 @@
     <!-- ========== 한국어 ========== -->
     <section id="ko" class="section-ko">
       <h1>Barolingo Korean 개인정보처리방침</h1>
-      <p class="meta">최종 개정일: 2026년 5월 17일 · 시행일: 2026년 5월 17일</p>
+      <p class="meta">최종 개정일: 2026년 5월 24일 · 시행일: 2026년 5월 24일</p>
 
       <p>wowpia(이하 "회사")는 Barolingo 애플리케이션(이하 "서비스") 이용자의 개인정보를 소중히 여기며, <strong>「개인정보 보호법」</strong>을 비롯한 관련 법령을 준수합니다. 본 방침은 이용자가 어떤 정보를 제공하고 어떻게 보호되는지 안내합니다.</p>
 
@@ -94,6 +94,15 @@
       </ul>
       <p>응원 메시지는 발신자·수신자 본인만 볼 수 있으며 공개 게시판에 노출되지 않습니다. 부적절한 콘텐츠 신고 시 회사는 즉시 검토하여 삭제할 수 있습니다. 사용자가 친구 관계를 해제하거나 회원 탈퇴 시 관련 데이터는 즉시 파기됩니다.</p>
 
+      <h3>1-5. 따라말하기 (Speaking Mode) 음성 처리</h3>
+      <ul>
+        <li><strong>마이크 권한 (RECORD_AUDIO)</strong>: 사용자가 "따라말하기" 화면에서 직접 녹음 버튼을 누른 경우에만 사용. 백그라운드 녹음 X.</li>
+        <li><strong>음성 데이터</strong>: 녹음된 짧은 음성 (보통 3-10초) 은 정확도 채점을 위해 일시적으로 처리되며, <strong>서버나 디바이스에 저장하지 않습니다</strong>.</li>
+        <li>채점 후 저장되는 데이터: 정확도 점수 (0-100), 인식된 텍스트 (text only), 시도 시각, 청크 ID — 음성 파일 자체는 폐기.</li>
+        <li>처리 방식: 디바이스에서 녹음 → 서버로 전송 → Google Gemini AI 가 음성→텍스트 변환 → 결과 텍스트만 비교 → 음성 파일 즉시 삭제.</li>
+      </ul>
+      <p>음성 인식 결과 텍스트는 사용자 본인의 학습 통계 (정확도 추이) 용도로만 사용되며 외부에 공개되지 않습니다. 사용자가 회원 탈퇴 시 관련 통계도 즉시 파기됩니다.</p>
+
       <h2>2. 수집 및 이용 목적</h2>
       <ul>
         <li>회원 식별 및 로그인 유지</li>
@@ -115,17 +124,18 @@
           <tr><td>Google AdMob</td><td>광고 ID, IP, 디바이스 정보</td><td>광고 게재 및 수익화</td></tr>
           <tr><td>Sentry</td><td>크래시 스택 트레이스, 앱 버전</td><td>앱 오류 진단</td></tr>
           <tr><td>PostHog</td><td>이벤트 로그, 익명 ID</td><td>제품 개선 분석</td></tr>
-          <tr><td>Anthropic / Google Gemini</td><td>단어 생성 prompt (사용자 데이터 X)</td><td>매일 K-콘텐츠 단어 자동 생성</td></tr>
+          <tr><td>Anthropic / Google Gemini</td><td>단어 생성 prompt + 따라말하기 음성 (text 변환 후 즉시 폐기)</td><td>매일 K-콘텐츠 자동 생성 + 음성 인식 (Speaking Mode)</td></tr>
           <tr><td>Expo (Expo Push API)</td><td>Push token, 메시지 내용</td><td>매일 K-단어 알림 발송</td></tr>
         </tbody>
       </table>
-      <p>각 수탁자의 개인정보 처리방침은 해당 업체 웹사이트에서 확인할 수 있습니다.</p>
+      <p>각 수탁자의 개인정보 처리방침은 해당 업체 웹사이트에서 확인할 수 있습니다. 음성 데이터는 Google Gemini API 처리 후 즉시 폐기되며 학습/저장에 사용되지 않습니다.</p>
 
       <h2>4. 개인정보 보유 및 이용 기간</h2>
       <ul>
         <li>회원 탈퇴 요청 시: 즉시 파기 (최대 30일 내 완전 삭제)</li>
         <li>법령에 따른 보관 의무가 있는 경우: 해당 법령에서 정한 기간</li>
         <li>학습 통계(익명 집계): 무기한 보관 가능 (개인 식별 불가한 형태)</li>
+        <li><strong>음성 데이터 (Speaking Mode)</strong>: 채점 처리 후 즉시 폐기 — 서버/디바이스 어디에도 저장하지 않음</li>
       </ul>
 
       <h2>5. 이용자의 권리</h2>
@@ -157,13 +167,14 @@
         <li>2026-04-19: 최초 제정</li>
         <li>2026-05-12: 푸시 알림 토큰 + AI 자동 생성 콘텐츠 (Google Gemini) 항목 추가</li>
         <li>2026-05-17: 친구 시스템 (UGC 응원 메시지, 친구 활동 알림) 항목 추가</li>
+        <li>2026-05-24: 따라말하기 (Speaking Mode) 음성 처리 항목 추가 — 마이크 권한, ephemeral 처리, Google Gemini STT 위탁</li>
       </ul>
     </section>
 
     <!-- ========== English ========== -->
     <section id="en" class="section-en">
       <h1>Barolingo Privacy Policy</h1>
-      <p class="meta">Last updated: May 17, 2026 · Effective: May 17, 2026</p>
+      <p class="meta">Last updated: May 24, 2026 · Effective: May 24, 2026</p>
 
       <p>wowpia ("we", "us", "our") values the privacy of Barolingo users. This policy explains what information we collect and how we protect it, in compliance with applicable data protection laws.</p>
 
@@ -199,6 +210,15 @@
       </ul>
       <p>Cheer messages are visible only to the sender and recipient — never posted publicly. Reported inappropriate content is reviewed and removed promptly. When a user unfriends or deletes their account, related data is immediately purged.</p>
 
+      <h3>1-5. Speaking Mode Voice Processing</h3>
+      <ul>
+        <li><strong>Microphone permission (RECORD_AUDIO)</strong>: Used only when the user explicitly taps the record button in the "Speak &amp; Repeat" screen. No background recording.</li>
+        <li><strong>Voice data</strong>: Short recordings (typically 3–10 seconds) are processed transiently for accuracy scoring. <strong>Audio is NOT stored on our servers or your device.</strong></li>
+        <li>What is stored after scoring: accuracy score (0–100), recognized text (text only), attempt timestamp, chunk ID — the audio file itself is discarded.</li>
+        <li>Processing flow: device records → upload to server → Google Gemini AI performs speech-to-text → result text compared to expected → audio file immediately discarded.</li>
+      </ul>
+      <p>Recognized text is used only for the user's own learning statistics (accuracy trend) and is never disclosed externally. On account deletion, related stats are immediately purged.</p>
+
       <h2>2. Purposes of Collection and Use</h2>
       <ul>
         <li>Member identification and session persistence</li>
@@ -219,16 +239,18 @@
           <tr><td>Google AdMob</td><td>Ad ID, IP, device info</td><td>Ad serving</td></tr>
           <tr><td>Sentry</td><td>Stack traces, app version</td><td>Crash diagnostics</td></tr>
           <tr><td>PostHog</td><td>Event logs, anonymous ID</td><td>Product analytics</td></tr>
-          <tr><td>Anthropic / Google Gemini</td><td>Word generation prompts (no user data)</td><td>Daily K-content word generation</td></tr>
+          <tr><td>Anthropic / Google Gemini</td><td>Word generation prompts + Speaking Mode voice (discarded immediately after transcription)</td><td>Daily K-content generation + Speech-to-text (Speaking Mode)</td></tr>
           <tr><td>Expo (Expo Push API)</td><td>Push token, message content</td><td>Daily K-word + friend activity notifications</td></tr>
         </tbody>
       </table>
+      <p>Voice data sent to Google Gemini is discarded immediately after transcription and is not used for training or storage.</p>
 
       <h2>4. Data Retention</h2>
       <ul>
         <li>On account deletion request: deleted within 30 days</li>
         <li>When required by law: per applicable legal retention period</li>
         <li>Anonymized aggregate statistics: retained indefinitely (no personal identifiers)</li>
+        <li><strong>Voice data (Speaking Mode)</strong>: discarded immediately after scoring — never stored on server or device</li>
       </ul>
 
       <h2>5. Your Rights</h2>
@@ -258,6 +280,9 @@
       <h2>8. Revision History</h2>
       <ul>
         <li>2026-04-19: Initial version</li>
+        <li>2026-05-12: Added push notification token + AI-generated content (Google Gemini) sections</li>
+        <li>2026-05-17: Added Friends system (UGC cheers, friend activity notifications) section</li>
+        <li>2026-05-24: Added Speaking Mode voice processing section — microphone permission, ephemeral processing, Google Gemini STT processor</li>
       </ul>
     </section>
   </div>
