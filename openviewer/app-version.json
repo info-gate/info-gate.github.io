@@ -1,5 +1,5 @@
 {
-  "_comment": "OpenViewer (com.infogate.openviewer) — canonical at /openviewer/. /opendocs/ = legacy mirror. Update manually after each Play Store live release.",
+  "_comment": "OpenViewer (com.infogate.openviewer) — app-version manifest. Update manually after each Play Store live release.",
   "android": {
     "latestVersion": "1.0.8",
     "minVersion": "1.0.0",
