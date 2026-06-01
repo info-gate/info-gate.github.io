@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>엘리마스터 계정 삭제 요청</title>
+  <link rel="canonical" href="https://info-gate.github.io/eleinfomaster/delete-account/">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans KR', sans-serif; color: #1f2937; background: #fafafa; line-height: 1.7; padding: 24px; }
+    .container { max-width: 760px; margin: 0 auto; background: #fff; padding: 40px 32px; border-radius: 16px; box-shadow: 0 2px 12px rgba(0,0,0,0.04); }
+    h1 { font-size: 24px; margin-bottom: 6px; color: #DC2626; }
+    h2 { font-size: 18px; margin-top: 28px; margin-bottom: 10px; color: #1f2937; border-left: 3px solid #DC2626; padding-left: 10px; }
+    p, li { font-size: 14px; color: #4B5563; margin-bottom: 6px; }
+    ul, ol { padding-left: 22px; margin-bottom: 8px; }
+    .updated { font-size: 12px; color: #9CA3AF; margin-bottom: 24px; }
+    .badge { display: inline-block; background: #FEE2E2; color: #DC2626; padding: 4px 10px; border-radius: 6px; font-size: 12px; font-weight: 600; margin-bottom: 16px; }
+    .footer { margin-top: 30px; padding-top: 18px; border-top: 1px solid #E5E7EB; font-size: 12px; color: #9CA3AF; text-align: center; }
+    .footer a { color: #0F766E; margin: 0 8px; text-decoration: none; }
+    .cta { display: inline-block; background: #DC2626; color: #fff; padding: 12px 24px; border-radius: 10px; text-decoration: none; font-weight: 700; margin-top: 12px; }
+    .cta:hover { background: #B91C1C; }
+    code { background: #F3F4F6; padding: 2px 6px; border-radius: 4px; font-size: 13px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>엘리마스터 계정 삭제 요청</h1>
+    <div class="badge">⚠️ 영구 삭제 — 복구 불가</div>
+    <div class="updated">시행일: 2026-06-01</div>
+
+    <h2>방법 1 — 앱 안에서 직접 (권장)</h2>
+    <ol>
+      <li>엘리마스터 앱 실행 → 로그인</li>
+      <li>하단 탭 "설정" → "계정 삭제" 메뉴</li>
+      <li>비밀번호 재입력으로 본인 확인</li>
+      <li>"영구 삭제" 버튼 → 즉시 처리</li>
+    </ol>
+    <p><em>※ Sprint 2 에서 앱 내 삭제 메뉴 추가 예정. 현재는 아래 방법 2 로 부탁드립니다.</em></p>
+
+    <h2>방법 2 — 이메일 요청</h2>
+    <p>아래 이메일로 삭제 요청을 보내주시면 영업일 기준 3일 내 처리합니다.</p>
+    <a class="cta" href="mailto:wowpia0127@gmail.com?subject=[엘리마스터] 계정 삭제 요청&body=가입 이메일:%0D%0A회사명:%0D%0A삭제 사유 (선택):%0D%0A">계정 삭제 요청 메일 보내기</a>
+
+    <h2>삭제 처리 절차</h2>
+    <ol>
+      <li>회원 정보 (이메일·이름·전화번호·비밀번호 해시) 즉시 삭제</li>
+      <li>비즈니스 데이터 (회사가 입력한 자산·점검·청구 등) — 회사 계정 모든 사용자 동의 시 영구 삭제</li>
+      <li>audit_logs (전자상거래법 5년 보관 의무) — 익명화 후 보관 (이메일·이름 → 해시)</li>
+      <li>30일 보관 후 (오인 탈퇴 복구 기간) 백업에서도 영구 제거</li>
+    </ol>
+
+    <h2>주의 사항</h2>
+    <ul>
+      <li>사장 (owner) 계정 삭제 시 → 회사 전체 데이터 삭제 (다른 사용자에게도 영향)</li>
+      <li>기사/관리자 계정만 삭제 가능 (회사 데이터 유지) — 사장이 앱 설정 → 멤버 관리에서 처리</li>
+      <li>현재 진행 중인 미수금/약속/점검은 다른 사용자에게 인계 후 삭제 권장</li>
+      <li>월 구독 중인 경우 결제 취소 별도 필요</li>
+    </ul>
+
+    <h2>문의</h2>
+    <p>이메일: <a href="mailto:wowpia0127@gmail.com">wowpia0127@gmail.com</a></p>
+
+    <div class="footer">
+      엘리마스터 · 인포게이트 (Info-Gate Inc.)<br>
+      <a href="/eleinfomaster/">홈</a> · <a href="/eleinfomaster/privacy/">개인정보 처리방침</a> · <a href="/eleinfomaster/terms/">이용약관</a>
+    </div>
+  </div>
+</body>
+</html>
