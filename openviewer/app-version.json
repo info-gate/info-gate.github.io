@@ -1,13 +1,13 @@
 {
-  "_comment": "OpenViewer (com.infogate.openviewer) — app-version manifest. Update manually after each Play Store live release.",
+  "_comment": "OpenViewer (Android: com.infogate.openviewer / iOS: com.wowpia.opendocs, ASC 6763845346) — app-version manifest. Update manually after each store live release.",
   "android": {
     "latestVersion": "1.0.19",
     "minVersion": "1.0.0",
     "storeUrl": "https://play.google.com/store/apps/details?id=com.infogate.openviewer"
   },
   "ios": {
-    "latestVersion": "1.0.0",
+    "latestVersion": "1.0.19",
     "minVersion": "1.0.0",
-    "storeUrl": "https://apps.apple.com/app/idXXXXXXXXX"
+    "storeUrl": "https://apps.apple.com/app/id6763845346"
   }
 }
