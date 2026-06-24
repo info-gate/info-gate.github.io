@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nailva — 계정 삭제 안내 / Account Deletion</title>
+  <meta name="description" content="Nailva 계정 및 관련 데이터 삭제 방법 안내. How to delete your Nailva account and data.">
+  <link rel="canonical" href="https://info-gate.github.io/nailva/delete-account/">
+  <meta name="theme-color" content="#E91E63">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans KR', sans-serif;
+      color: #1A1D22;
+      background: #fafafa;
+      line-height: 1.7;
+    }
+    body { min-height: 100vh; padding: 40px 20px; }
+    .wrap { max-width: 720px; margin: 0 auto; background: #fff; border-radius: 12px; padding: 40px; border: 1px solid #F1F3F6; }
+    .brand { font-size: 14px; letter-spacing: 1px; color: #E91E63; font-weight: 700; margin-bottom: 8px; }
+    h1 { font-size: 28px; font-weight: 800; margin-bottom: 8px; line-height: 1.3; }
+    .subtitle { font-size: 14px; color: #7A828C; margin-bottom: 32px; }
+    h2 { font-size: 18px; font-weight: 700; margin-top: 36px; margin-bottom: 12px; color: #1A1D22; }
+    h3 { font-size: 15px; font-weight: 700; margin-top: 20px; margin-bottom: 8px; color: #1A1D22; }
+    p, li { font-size: 14px; color: #3A3F47; margin-bottom: 8px; }
+    ul, ol { margin-left: 20px; margin-bottom: 12px; }
+    ol li { margin-bottom: 6px; }
+    .callout {
+      background: #FCE7F3;
+      border-left: 4px solid #E91E63;
+      padding: 14px 18px;
+      border-radius: 6px;
+      margin: 16px 0;
+    }
+    .callout strong { color: #AD1457; }
+    .divider { border: none; border-top: 1px solid #E2E5EA; margin: 40px 0; }
+    table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+    th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid #E2E5EA; }
+    th { background: #F7F8FA; font-weight: 700; color: #1A1D22; }
+    a { color: #AD1457; }
+    .en { color: #4B5159; }
+    footer { text-align: center; margin-top: 40px; font-size: 12px; color: #7A828C; }
+    footer a { margin: 0 6px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="brand">NAILVA</div>
+    <h1>계정 삭제 안내<br/><span class="en" style="font-size: 20px; font-weight: 700;">Account Deletion</span></h1>
+    <div class="subtitle">Nailva — Nail Salon Manager (개발자: wowpia / Info-Gate Inc.) · 최종 업데이트: 2026-06-24</div>
+
+    <div class="callout">
+      <strong>요약 / Summary</strong><br/>
+      Nailva 는 기본적으로 모든 데이터를 사장님 기기 내부 (SQLite)에 저장합니다. 앱을 삭제하면 모든 데이터가 즉시 제거됩니다.<br/>
+      <strong>클라우드 백업</strong>(설정 → 클라우드 백업)을 사용한 적이 있다면, 서버 계정 삭제를 추가로 요청하셔야 합니다.<br/><br/>
+      Nailva stores all data locally on your device (SQLite) by default. Uninstalling the app removes all data immediately. If you have used <strong>Cloud Backup</strong>, a separate server account deletion request is also required.
+    </div>
+
+    <h2>1. 삭제 방법 (How to Delete)</h2>
+
+    <h3>방법 1: 로컬 데이터만 사용한 경우 / Local Data Only</h3>
+    <p>클라우드 백업 기능을 사용한 적이 없다면 기기에서 앱을 삭제하는 것만으로 모든 데이터가 영구 삭제됩니다.</p>
+    <p>If you have never used Cloud Backup, simply uninstalling the app permanently removes all data.</p>
+    <ol>
+      <li>Android: 설정 → 앱 → Nailva → 제거 / Settings → Apps → Nailva → Uninstall</li>
+      <li>iOS: 홈 화면 → Nailva 아이콘 길게 누르기 → 앱 제거 / Long-press Nailva → Remove App</li>
+    </ol>
+    <p>✅ <strong>즉시 영구 삭제됩니다 (Instant permanent deletion).</strong></p>
+
+    <h3>방법 2: 클라우드 백업을 사용한 경우 / If You Used Cloud Backup</h3>
+    <p>설정 → 클라우드 백업 메뉴에 로그인한 적이 있다면, 서버에 데이터가 백업되어 있을 수 있습니다. 서버 계정 삭제를 요청하세요:</p>
+    <p>If you have ever logged in via Settings → Cloud Backup, your data may be on our servers. Request server account deletion:</p>
+    <ul>
+      <li>수신 / To: <a href="mailto:wowpia0127@gmail.com">wowpia0127@gmail.com</a></li>
+      <li>제목 / Subject: <strong>[Nailva] Account Deletion Request</strong></li>
+      <li>본문에 포함할 정보 / Include in body:
+        <ul>
+          <li>로그인 시 사용한 소셜 계정 유형 (Kakao / Google) / Social provider used</li>
+          <li>가입 시 이메일 주소 / Email used at signup</li>
+          <li>앱 내 닉네임 / Nickname in the app</li>
+        </ul>
+      </li>
+    </ul>
+    <p>✅ <strong>요청 접수 후 7일 이내 처리됩니다.</strong> / Processed within 7 days of receipt.</p>
+    <p>처리 완료 시 동일 이메일로 회신드립니다. / We will reply to the same email when complete.</p>
+
+    <hr class="divider"/>
+
+    <h2>2. 삭제되는 데이터 / Data That Will Be Deleted</h2>
+
+    <h3>기기 내 로컬 데이터 (앱 제거 시) / Local Device Data (On Uninstall)</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>데이터 / Data</th>
+          <th>삭제 여부 / Deleted?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>고객 정보 (이름·전화번호·메모) / Customer info (name, phone, notes)</td><td>✅ 즉시 / Immediate</td></tr>
+        <tr><td>시술 기록 / Service history</td><td>✅ 즉시 / Immediate</td></tr>
+        <tr><td>예약 정보 / Bookings</td><td>✅ 즉시 / Immediate</td></tr>
+        <tr><td>시술 사진 / Service photos</td><td>✅ 즉시 / Immediate</td></tr>
+        <tr><td>매출·통계 / Revenue stats</td><td>✅ 즉시 / Immediate</td></tr>
+        <tr><td>앱 설정·언어·테마 / App settings</td><td>✅ 즉시 / Immediate</td></tr>
+        <tr><td>로그인 토큰 / Auth tokens</td><td>✅ 즉시 / Immediate</td></tr>
+      </tbody>
+    </table>
+
+    <h3>서버 계정 데이터 (이메일 요청 시) / Server Account Data (On Email Request)</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>데이터 / Data</th>
+          <th>삭제 여부 / Deleted?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>이메일 주소 / Email address</td><td>✅ 즉시 / Immediate</td></tr>
+        <tr><td>닉네임 / Nickname</td><td>✅ 즉시 / Immediate</td></tr>
+        <tr><td>소셜 로그인 식별자 (Kakao/Google ID) / Social login ID</td><td>✅ 즉시 / Immediate</td></tr>
+        <tr><td>클라우드 백업된 고객·시술·예약 데이터 / Cloud-backed customer data</td><td>✅ 즉시 / Immediate</td></tr>
+        <tr><td>인증 토큰·세션 / Auth tokens & sessions</td><td>✅ 즉시 / Immediate</td></tr>
+      </tbody>
+    </table>
+
+    <hr class="divider"/>
+
+    <h2>3. 보관되는 데이터 / Data Retained (if any)</h2>
+
+    <h3>법적 의무에 의한 보관 / Retained by Legal Obligation</h3>
+    <p>현재 Nailva 는 <strong>유료 구독 또는 인앱 결제를 제공하지 않으며</strong>, 따라서 법적으로 보관해야 하는 금융 데이터가 없습니다.</p>
+    <p>Nailva does not offer paid subscriptions or in-app purchases yet, so no financial records are retained by legal obligation.</p>
+
+    <h3>익명화된 통계 / Anonymized Aggregate Statistics</h3>
+    <p>서비스 개선을 위한 <strong>익명화된 집계 통계</strong>(예: 일일 활성 사용자 수, 기능 사용 빈도 등)는 보관될 수 있습니다. 개인을 식별할 수 없는 형태로만 유지됩니다.</p>
+    <p>Anonymized aggregate statistics may be retained in non-identifiable form for service improvement.</p>
+
+    <h3>제3자 서비스 / Third-Party Services</h3>
+    <ul>
+      <li><strong>Google AdMob</strong>: 광고 ID 는 Google 정책에 따라 별도 관리됩니다. 기기 설정 → 개인정보 → 광고에서 광고 ID 재설정 가능. / Ad ID is managed by Google per their policy. Reset via device Settings → Privacy → Ads.</li>
+      <li><strong>Firebase Analytics / Crashlytics</strong>: 익명 분석·크래시 로그는 Google 정책에 따라 자동 만료됩니다. / Anonymous analytics and crash logs auto-expire per Google's policy.</li>
+      <li><strong>PostHog</strong>: 익명 사용 분석 데이터는 7일 후 자동 파기됩니다. / Anonymous usage analytics auto-expire after 7 days.</li>
+      <li><strong>Sentry</strong>: 크래시 로그는 90일 후 자동 파기됩니다. / Crash logs auto-expire after 90 days.</li>
+    </ul>
+
+    <hr class="divider"/>
+
+    <h2>4. 자주 묻는 질문 / FAQ</h2>
+
+    <h3>Q. 클라우드 백업을 사용한 적이 있는지 모르겠어요.</h3>
+    <p>A. 앱 → 설정 → 클라우드 백업 메뉴에서 "로그인됨" 상태로 표시되면 사용 중입니다. 사용한 적이 없다면 앱 삭제만으로 모든 데이터가 제거됩니다.</p>
+    <p><em>Open Settings → Cloud Backup. If it shows "Signed in", you have used it. If not, uninstalling the app removes all data.</em></p>
+
+    <h3>Q. 삭제 후 같은 소셜 계정으로 다시 가입 가능한가요?</h3>
+    <p>A. 네, 가능합니다. 단, 이전에 백업된 고객·시술 데이터는 복구되지 않습니다.</p>
+    <p><em>Yes, you can sign up again, but previously backed-up data will not be restored.</em></p>
+
+    <h3>Q. 일부 고객 정보만 삭제할 수 있나요?</h3>
+    <p>A. 앱 내에서 개별 고객·시술 기록·사진을 직접 삭제할 수 있습니다. 전체 계정 삭제 없이 데이터 일부만 삭제하려면 앱 내에서 직접 진행하세요.</p>
+    <p><em>Individual customer records, services, and photos can be deleted in-app without removing the whole account.</em></p>
+
+    <h3>Q. 처리 기간은 얼마나 걸리나요?</h3>
+    <p>A. 앱 삭제는 즉시. 이메일을 통한 서버 계정 삭제는 접수 후 7일 이내 처리됩니다.</p>
+    <p><em>App uninstall is immediate. Server account deletion via email is processed within 7 days.</em></p>
+
+    <hr class="divider"/>
+
+    <h2>5. 문의 / Contact</h2>
+    <p>삭제 관련 문의나 데이터 처리에 대한 질문:</p>
+    <p>For questions about deletion or data processing:</p>
+    <ul>
+      <li>이메일 / Email: <a href="mailto:wowpia0127@gmail.com">wowpia0127@gmail.com</a></li>
+      <li>개인정보처리방침 / Privacy Policy: <a href="https://info-gate.github.io/nailshop-privacy/">info-gate.github.io/nailshop-privacy/</a></li>
+    </ul>
+
+    <footer>
+      © 2026 wowpia · Nailva — Nail Salon Manager<br/>
+      <a href="/nailva/">홈 / Home</a> ·
+      <a href="https://info-gate.github.io/nailshop-privacy/">개인정보처리방침 / Privacy</a>
+    </footer>
+  </div>
+</body>
+</html>
